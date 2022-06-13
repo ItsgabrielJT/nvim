@@ -1,0 +1,121 @@
+set number
+set mouse=a
+set numberwidth=1
+set clipboard=unnamed
+syntax enable
+set showcmd
+set ruler
+set encoding=utf8
+set showmatch
+set sw=2
+set relativenumber
+set laststatus=2
+set cursorline
+set title
+set autoindent
+set formatoptions-=cro
+" set termguicolors
+syntax on
+set background=dark
+set nowrap
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+" Themes and visual
+Plug 'morhetz/gruvbox'
+Plug 'bignimbus/pop-punk.vim'
+
+" Iconos
+Plug 'ryanoasis/vim-devicons'
+
+" typing
+Plug 'tpope/vim-surround'
+
+" IDE
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-scripts/AutoClose'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
+" Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'} " Uncomment if you're not in WSL2
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'yggdroot/indentline'
+Plug 'honza/vim-snippets'
+
+" Vim integration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+
+call plug#end()
+
+" Color Scheme 
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+
+" Atajos
+let mapleader=" "
+
+nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>x :x<CR>
+nmap <Leader>q :q<CR>
+nmap <Leader>qq :q!<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>e <C-^>
+nmap <Leader>ñ :!
+imap jj <Esc>
+
+" Nerd Tree Find config
+let NERDTreeQuitOnOpen=1
+nmap <Leader><tab> :NERDTreeFind<CR>
+
+" Emmet config
+" let g:user_emmet_expandabbr_key="<Tab>"
+" imap <expr> <tab> emmet#expandAbbrIntelligent("<tab>")
+
+" Airline config
+" let g:airline_theme = 'pop_punk'
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'gruvbox'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" Vim Commentary config
+nmap <space>/ :Commentary<CR>
+vnoremap <space>/ :Commentary<CR>
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Prettier settings
+nmap <Leader>p :Prettier<CR>
+let g:prettier#config#tab_width = 2
+let g:prettier#config#use_tabs = 'false'
+let g:prettier#quickfix_enabled = 0
+
+" IdentLine config
+let g:indentLine_enabled = 1
+
+" Coc config
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-html', 'coc-css', 'coc-snippets']
+
+" Coc Snippets config
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)

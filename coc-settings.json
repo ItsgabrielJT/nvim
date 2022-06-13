@@ -1,0 +1,7 @@
+{
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips", 
+  "suggest.noselect": false,
+  "python.autoComplete.addBrackets": true,
+  "python.autoComplete.extraPaths": [],
+  "clangd.path": "/home/oscar/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
+}
