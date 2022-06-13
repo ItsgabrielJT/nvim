@@ -1,6 +1,8 @@
 " Atajos
+" Asiganamos nuestra tecla  lideer
 let mapleader=" "
 
+" nmao significq que la tecla ssolo se activa en modo  normal                 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>x :x<CR>
 nmap <Leader>q :q<CR>
