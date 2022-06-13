@@ -1,4 +1,4 @@
-" Plugins
+"Plug 'alvan/vim-closetag' Plugins
 call plug#begin('~/.vim/plugged')
 
 " Themes and visual
@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-scripts/AutoClose'
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
 
 " Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'

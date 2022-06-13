@@ -32,4 +32,5 @@ syntax on
 "set background=dark
 set nowrap
 
-
+" Para cerra tags automaticamente
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
