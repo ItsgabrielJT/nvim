@@ -12,4 +12,5 @@ nmap <Leader>e <C-^>
 nmap <Leader>ñ :!
 imap jj <Esc>
 
-
+nnoremap <C-t> :split<CR>:ter<CR>:resize 15<CR>
+vnoremap <C-t> :split<CR>:ter<CR>:resize 15<CR> 

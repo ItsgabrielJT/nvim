@@ -23,6 +23,10 @@ set relativenumber
 " Podemos ver siempre la barra de startus
 set laststatus=2
 
+" Colocamos la terminal siempre abajo
+set splitbelow
+set splitright
+
 set cursorline
 set title
 set autoindent
