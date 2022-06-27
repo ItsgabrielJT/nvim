@@ -1,5 +1,5 @@
 " Coc config
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-html', 'coc-css', 'coc-snippets']
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-html', 'coc-css', 'coc-snippets', 'coc-pyright']
 
 " Coc Snippets config
 " Use <C-l> for trigger snippet expand.
